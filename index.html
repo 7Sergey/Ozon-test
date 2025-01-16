@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Progress Block</title>
+  </head>
+  <body class="body">
+    <div class="page">
+      <h1 class="page__title">Progress</h1>
+      <div class="container">
+        <div id="progressBlock" class="container__wheel">
+          <div class="progress">
+            <div id="progressCircle" class="progress-circle"></div>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="control">
+            <input
+              id="progressValue"
+              type="number"
+              min="0"
+              max="100"
+              value="0"
+            />
+            <label for="progressValue">Value</label>
+          </div>
+          <div class="control">
+            <input id="animateToggle" type="checkbox" />
+            <label for="animateToggle">Animate</label>
+          </div>
+          <div class="control">
+            <input id="hideToggle" type="checkbox" />
+            <label for="hideToggle">Hide</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
