@@ -7,12 +7,11 @@
 @import url(../blocks/progress-wrapper/progress-wrapper.css);
 @import url(../blocks/progress-wrapper/__progress-bg/progress-wrapper__progress-bg.css);
 @import url(../blocks/progress-wrapper/__progress-bar/progress-wrapper__progress-bar.css);
+@import url(../blocks/progress-wrapper/__circle/progress-wrapper__circle.css);
 
 @import url(../blocks/controls-container/controls-container.css);
 @import url(../blocks/controls-container/__item/controls-container__item.css);
 @import url(../blocks/controls-container/__paragraph/controls-container__paragraph.css);
 
 @import url(../blocks/svg/svg.css);
-@import url(../blocks/progress-wrapper/__circle/progress-wrapper__circle.css);
-
 @import url(../blocks/is-hidden/is-hidden.css);
