@@ -13,6 +13,6 @@
 @import url(../blocks/controls-container/__paragraph/controls-container__paragraph.css);
 
 @import url(../blocks/svg/svg.css);
-@import url(../blocks/circle/circle.css);
+@import url(../blocks/progress-wrapper/__circle/progress-wrapper__circle.css);
 
 @import url(../blocks/is-hidden/is-hidden.css);
