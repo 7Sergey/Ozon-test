@@ -1,7 +1,6 @@
 .body {
-  height: 100vh;
+  box-sizing: border-box;
+  min-height: 100vh;
   margin: 0;
-
   background-color: #f4f7fa;
-  /* outline: solid rgb(248, 13, 13) 0.5px; */
 }

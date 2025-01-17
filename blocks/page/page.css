@@ -1,11 +1,21 @@
 .page {
-  /* display: flex; */
+  font-family: Arial, sans-serif;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f7fa;
   box-sizing: border-box;
+  padding-top: 20px;
+}
 
-  font-family: "Roboto", Arial, sans-serif;
-
-  outline: solid rgb(248, 13, 13) 0.5px;
+@media screen and (min-width: 567px) {
+  .page {
+    padding-top: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 85px;
+  }
 }

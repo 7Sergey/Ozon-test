@@ -1,13 +1,5 @@
 /* Стили для прогресса */
-.progress-container {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .hidden {
   display: none;
 }
