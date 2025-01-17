@@ -5,167 +5,46 @@
     <link rel="stylesheet" href="./pages/index.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Progress Block</title>
-    <style>
-      .progress-wrapper {
-        position: relative;
-        width: 120px;
-        height: 120px;
-        margin-top: 80px;
-      }
-      @media screen and (min-width: 568px) {
-        .progress-wrapper {
-          margin-top: 0px;
-        }
-      }
-
-      svg {
-        transform: rotate(-90deg);
-      }
-      circle {
-        fill: none;
-        stroke-width: 10;
-      }
-
-      .progress-bg {
-        stroke: #e6e6e6;
-      }
-
-      .progress-bar {
-        stroke: #007bff;
-        stroke-dasharray: 377; /* Периметр круга с радиусом 60 */
-        stroke-dashoffset: 377;
-        transform-origin: center;
-        transition: stroke-dashoffset 0.3s linear;
-      }
-
-      .is-hidden {
-        display: none;
-      }
-      .controls-container {
-        margin-top: 85px;
-        display: flex;
-
-        flex-direction: column;
-        align-items: flex-start;
-        /* outline: solid rgb(248, 13, 13) 0.5px; */
-
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 9px;
-      }
-      @media screen and (min-width: 568px) {
-        .controls-container {
-          margin-top: 0px;
-        }
-      }
-
-      .control-item {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        justify-content: space-between;
-      }
-      .control-item label {
-        font-size: 16px;
-        font-weight: 500;
-        color: #000;
-      }
-      .control-paragraph {
-        margin: 0;
-        display: block;
-      }
-
-      .control-item input[type="number"] {
-        width: 45px;
-        box-sizing: border-box;
-        padding: 3px;
-        border: 2px solid #000;
-        border-radius: 20px;
-        text-align: center;
-        font-size: 16px;
-        font-weight: bold;
-      }
-
-      .control-item input[type="checkbox"] {
-        appearance: none;
-        width: 45px;
-        height: 30px;
-        background: #e5e8ed;
-        border-radius: 40px;
-        position: relative;
-        cursor: pointer;
-        outline: none;
-        transition: background 0.3s ease-in-out;
-      }
-
-      .control-item input[type="checkbox"]::before {
-        content: "";
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        width: 24px;
-        height: 24px;
-        background: #fff;
-        border-radius: 50%;
-        transition: transform 0.3s ease-in-out;
-      }
-
-      .control-item input[type="checkbox"]:checked {
-        background: #007bff;
-      }
-
-      .control-item input[type="checkbox"]:checked::before {
-        transform: translateX(15px);
-      }
-      .control-paragraph {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-        /* outline: solid rgb(10, 10, 10) 0.5px; */
-        height: 100%;
-        font-family: sans-serif;
-        font-style: normal;
-        margin: 0;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 22px;
-      }
-    </style>
   </head>
   <body class="body">
     <h1 class="title">Progress</h1>
     <main class="page">
-      <div class="progress-wrapper" id="progress-wrapper">
-        <svg width="120" height="120" viewBox="0 0 140 140">
-          <!-- Background circle -->
-          <circle class="progress-bg" cx="70" cy="70" r="60" />
-          <!-- Progress circle -->
-          <circle class="progress-bar" cx="70" cy="70" r="60" />
+      <section class="progress-wrapper" id="progress-wrapper">
+        <svg class="svg" width="120" height="120" viewBox="0 0 140 140">
+          <circle
+            class="progress-wrapper__progress-bg circle"
+            cx="70"
+            cy="70"
+            r="60"
+          />
+          <circle
+            class="progress-wrapper__progress-bar circle"
+            cx="70"
+            cy="70"
+            r="60"
+          />
         </svg>
-      </div>
-      <div class="controls-container">
-        <label class="control-item">
+      </section>
+      <section class="controls-container">
+        <label class="controls-container__item">
           <input
             type="number"
             id="progress-value"
             min="0"
             max="100"
-            value="10"
+            value="0"
           />
         </label>
-        <p class="control-paragraph">Value</p>
-        <label class="control-item">
+        <p class="controls-container__paragraph">Value</p>
+        <label class="controls-container__item">
           <input type="checkbox" id="progress-animate" />
         </label>
-        <p class="control-paragraph">Animate</p>
-        <label class="control-item">
+        <p class="controls-container__paragraph">Animate</p>
+        <label class="controls-container__item">
           <input type="checkbox" id="progress-hide" />
         </label>
-        <p class="control-paragraph">Hide</p>
-      </div>
+        <p class="controls-container__paragraph">Hide</p>
+      </section>
     </main>
 
     <script src="./scripts/main.js"></script>

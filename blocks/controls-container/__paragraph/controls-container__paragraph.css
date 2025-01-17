@@ -1,0 +1,14 @@
+.controls-container__paragraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  /* outline: solid rgb(10, 10, 10) 0.5px; */
+  height: 100%;
+  font-family: sans-serif;
+  font-style: normal;
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}

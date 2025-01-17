@@ -1,5 +1,5 @@
 const progressWrapper = document.getElementById('progress-wrapper');
-const progressBar = document.querySelector('.progress-bar');
+const progressBar = document.querySelector('.progress-wrapper__progress-bar');
 const progressValueInput = document.getElementById('progress-value');
 const animateCheckbox = document.getElementById('progress-animate');
 const hideCheckbox = document.getElementById('progress-hide');
@@ -8,8 +8,8 @@ let isAnimating = false;
 let animationInterval;
 
 function updateProgress(value) {
-  const clampedValue = Math.max(0, Math.min(100, value)); // Restrict to range 0-100
-  const offset = 377 - (377 * clampedValue) / 100; // Calculate circle arc length
+  const clampedValue = Math.max(0, Math.min(100, value));
+  const offset = 377 - (377 * clampedValue) / 100;
   progressBar.style.strokeDashoffset = offset;
 }
 
@@ -50,5 +50,4 @@ hideCheckbox.addEventListener('change', (e) => {
   toggleVisibility(e.target.checked);
 });
 
-// Initialize with default value
 updateProgress(progressValueInput.value);

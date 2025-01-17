@@ -1,0 +1,54 @@
+.controls-container__item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.controls-container__item label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+.controls-container__item input[type="number"] {
+  width: 45px;
+  box-sizing: border-box;
+  padding: 3px;
+  border: 2px solid #000;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.controls-container__item input[type="checkbox"] {
+  appearance: none;
+  width: 45px;
+  height: 30px;
+  background: #e5e8ed;
+  border-radius: 40px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s ease-in-out;
+}
+
+.controls-container__item input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.controls-container__item input[type="checkbox"]:checked {
+  background: #007bff;
+}
+
+.controls-container__item input[type="checkbox"]:checked::before {
+  transform: translateX(15px);
+}

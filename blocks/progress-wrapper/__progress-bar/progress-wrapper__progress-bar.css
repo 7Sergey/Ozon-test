@@ -1,0 +1,7 @@
+.progress-wrapper__progress-bar {
+  stroke: #007bff;
+  stroke-dasharray: 377;
+  stroke-dashoffset: 377;
+  transform-origin: center;
+  transition: stroke-dashoffset 0.3s linear;
+}
